@@ -1,13 +1,16 @@
 
-
+function swap(arr,i,j){
+    arr[i]=arr[i]+arr[j];
+    arr[j]=arr[i]-arr[j];
+    arr[i]=arr[i]-arr[j];
+}
 function reverse(arr,i,j){
     if(i>=j){
         return
     }
-    arr[i]=arr[i]+arr[i];
-    arr[j]=arr[i]-arr[j];
-    arr[i]=arr[i]-arr[j]
-    reverse(i+1,j-1)
+
+    swap(arr,i,j)
+    reverse(arr,i+1,j-1)
 }
 
 let arr=[2,4,5,6,7,8,9,6];
